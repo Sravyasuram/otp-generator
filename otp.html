@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiit</title>
+    <style>
+       body{
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+       }
+       .box{
+        top:30%;
+        left:20%;
+        position: absolute;
+        background-color: blue;
+        height:300px;
+        width:400px;
+        border-radius: 20%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+       }
+       .box h1{
+        color:white
+       }
+       .otp{
+         height: 50px;
+         width:100px;
+         font-size: x-large;
+         border-radius: 10%;
+         background-color: rgb(220, 220, 121);
+         cursor: pointer;
+         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+       }
+       .otp:hover{
+        background-color: rgb(244, 244, 47);
+       }
+       #display{
+         height: 50px;
+         width:300px;
+         font-size: x-large;
+         border-radius: 10%;
+         background-color:rgb(197, 197, 221);
+         align-items: center;
+         justify-content: center;
+       }
+   
+    </style>
+</head>
+<body>
+    <main>
+        
+<div class="box">
+        <form>
+           <h1>OTP Generator</h1>
+        <button class="otp" onclick="randamNumber()">click</button><br><br>
+        <input type="text" id="display" placeholder="generate otp" readonly>
+       
+  </form>
+  </div>
+
+</main></body>
+<script>
+    
+ function randamNumber(){
+let  otp =Math.random()*Math.pow(10,6)
+return parseInt(otp);
+ }
+ 
+ 
+ document.querySelector("#display").value=randamNumber();
+
+ </script>
+    
+
+</html>
